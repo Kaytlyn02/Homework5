@@ -1,2 +1,13 @@
-library(tigris)
+library(tigris) 
+library(dplyr) 
+library(sf) 
 
+
+homicides <- homicide_data
+
+Phil_tracts <- tracts("PA", "Philadelphia", cb = TRUE, class = "sf")
+
+Phil_tracts %>% 
+slice(1:3)
+
+class(co_counties$geometry)
