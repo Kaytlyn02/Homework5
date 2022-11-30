@@ -42,7 +42,8 @@ Phil_map <- tracts("PA", "Philadelphia")
 philly <- ggplot() +
   geom_sf(data = Phil_map) +
   geom_point(data = Philly_killy, size=0.4, aes(x=lon, y=lat, col= fct_lump(victim_race, n=3))) +
-  labs(x = "Longitude", y = "Latitude", title= "Homicides in Philadelphia", col = "Victim Race")
+  labs(x = "Longitude", y = "Latitude", title= "Homicides in Philadelphia", col = "Victim Race")+
+theme_few()
 ```
 
 
