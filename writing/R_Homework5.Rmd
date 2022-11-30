@@ -1,6 +1,7 @@
 library(tigris) 
 library(dplyr) 
 library(sf) 
+library(ggplot2)
 
 
 homicides <- homicide_data
@@ -10,4 +11,9 @@ Phil_tracts <- tracts("PA", "Philadelphia", cb = TRUE, class = "sf")
 Phil_tracts %>% 
 slice(1:3)
 
-class(co_counties$geometry)
+class(Phil_tracts$geometry)
+st_bbox(Phil_tracts$geometry)
+
+ggplot() + 
+  geom_sf(data = Phil_tracts)
+
