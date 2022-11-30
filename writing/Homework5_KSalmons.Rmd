@@ -33,6 +33,9 @@ Philly_killy <-
   filter(homicides, city=="Philadelphia")
 ```
 
+```{r map of census tracts in Philly, echo=FALSE}
+Phil_map <- tracts("PA", "Philadelphia")
+```
 
 
 
