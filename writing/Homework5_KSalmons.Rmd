@@ -28,6 +28,11 @@ homicides$disp_unsolved = (homicides$disposition !="Closed by arrest")
 head(homicides)
 ```
 
+```{r filter Philly , echo=FALSE}
+Philly_killy <- 
+  filter(homicides, city=="Philadelphia")
+```
+
 
 
 
