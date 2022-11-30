@@ -46,6 +46,7 @@ philly <- ggplot() +
 theme_few()
 philly_labels <- as_labeller(c('FALSE' = "Solved",
   'TRUE' = "Unsolved"))
+philly + facet_wrap(~disp_unsolved, ncol = 1, labeller = philly_labels)
 ```
 
 
