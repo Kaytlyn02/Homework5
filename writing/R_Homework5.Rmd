@@ -17,3 +17,11 @@ st_bbox(Phil_tracts$geometry)
 ggplot() + 
   geom_sf(data = Phil_tracts)
 
+Phil_tracts <- st_as_sf(Phil_tracts, coords = c("lon", "lat")) %>% 
+  st_set_crs(4269)
+
+ggplot() + 
+  geom_sf(data = Phil_tracts, color = "lightgray") + 
+  geom_sf(data = Phil_tracts, aes(color = month(begin_date_time),
+                                  shape = time)) + 
+  scale_color_viridis(name = "Month") 
